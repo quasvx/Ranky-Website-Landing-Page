@@ -48,6 +48,7 @@ Quasvx: Lead Engineering / Technical Architecture / Web Development.
 ¿Quieres reportar un error en la web? / Wanna report a website bug?
 
 Join our Community! / ¡Únete a la comunidad! (Discord/WhatsApp)
+
 https://ranky.pages.dev/discord
 
 https://chat.whatsapp.com/EolcRShcdq3BML1fKpFpOn
