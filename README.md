@@ -49,6 +49,7 @@ Quasvx: Lead Engineering / Technical Architecture / Web Development.
 
 Join our Community! / ¡Únete a la comunidad! (Discord/WhatsApp)
 https://ranky.pages.dev/discord
+
 https://chat.whatsapp.com/EolcRShcdq3BML1fKpFpOn
 
 Related with https://github.com/quasvx/ranky-website
