@@ -52,9 +52,11 @@ https://ranky.pages.dev/discord
 
 https://chat.whatsapp.com/EolcRShcdq3BML1fKpFpOn
 
+---
+
 Related with https://github.com/quasvx/ranky-website
 
 Relacionado con https://github.com/quasvx/ranky-website
 
 ---
-*Ranky Web Hub v1.0.0 | 2026*
+*Ranky Web Hub v1.7.0 | 2026*
