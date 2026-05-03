@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Not Found :(</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        .container { max-width: 500px; padding: 20px; }
+        h1 { font-size: 6rem; margin: 0; color: #38bdf8; line-height: 1; }
+        h2 { font-size: 1.8rem; margin: 10px 0; }
+        p { color: #94a3b8; font-size: 1.1rem; }
+        
+        .url-box {
+            background: #1e293b;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-family: monospace;
+            color: #fb7185; 
+            display: inline-block;
+            margin: 15px 0;
+            border: 1px solid #334155;
+        }       
+        
+        .lang-switch {
+            margin-bottom: 30px;
+        }
+        .btn-lang {
+            background: transparent;
+            border: 1px solid #38bdf8;
+            color: #38bdf8;
+            padding: 5px 15px;
+            margin: 0 5px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+        .btn-lang.active {
+            background: #38bdf8;
+            color: #0f172a;
+        }
+        .btn-home {
+            display: block;
+            margin: 20px auto;
+            padding: 12px 24px;
+            background-color: #f8fafc;
+            color: #0f172a;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="lang-switch">
+            <button class="btn-lang" id="btn-es" onclick="setLanguage('es')">ES</button>
+            <button class="btn-lang" id="btn-en" onclick="setLanguage('en')">EN</button>
+        </div>
+
+        <h1>404</h1>
+        <h2 id="title">Cargando...</h2>
+        <p id="desc">Cargando...</p>
+        
+        <div class="url-box" id="host-display"></div>
+        
+        <a href="/" id="btn-home" class="btn-home">Volver al inicio</a>
+    </div>
+
+    <script>
+        const content = {
+            es: {
+                title: "¡Página no encontrada!",
+                desc: "Parece que intentaste acceder a una ruta inexistente en:",
+                btn: "Volver al inicio"
+            },
+            en: {
+                title: "Page not found!",
+                desc: "It seems you tried to access a non-existent path at:",
+                btn: "Back to home"
+            }
+        };
+
+        function setLanguage(lang) {
+            // Actualizar textos
+            document.getElementById('title').innerText = content[lang].title;
+            document.getElementById('desc').innerText = content[lang].desc;
+            document.getElementById('btn-home').innerText = content[lang].btn;
+
+            // Actualizar botones (estética)
+            document.getElementById('btn-es').classList.toggle('active', lang === 'es');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+        }
+
+        window.onload = function() {
+            // 1. Detectar Dominio y quitar rutas (limpiar /kedkeh etc)
+            const host = window.location.hostname;
+            document.getElementById('host-display').innerText = host;
+
+            // 2. Detectar Idioma del Navegador
+            const browserLang = navigator.language || navigator.userLanguage;
+            const defaultLang = browserLang.startsWith('es') ? 'es' : 'en';
+            
+            setLanguage(defaultLang);
+        };
+    </script>
+</body>
+  </html>
+  
